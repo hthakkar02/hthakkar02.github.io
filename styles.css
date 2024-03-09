@@ -1,0 +1,158 @@
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background-color: #f0f0f0;
+    margin: 20px;
+    padding: 20px;
+}
+
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    padding: 20px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+header h1, header h2 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.responsive-img, .full-width-img, .grid-img, .hobby-img, .goal-img, .profile-img {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 50%;
+}
+
+.img-with-text, .hobby-detail, .goal, .about-me-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.about-text, .profile-img-container {
+    padding: 0 20px;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.internship {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.company-logo {
+    padding-top: 20px;
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    border-radius: 20%;
+}
+
+.internship-details {
+    flex-grow: 1;
+}
+
+.attribution {
+    font-size: 0.75em;
+    margin-top: 5px;
+    color: #666;
+    text-align: center;
+}
+
+.cc-icon {
+    height: 1em;
+    margin-right: 0.125em;
+    vertical-align: text-bottom;
+}
+
+.hobbies-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.hobby-section {
+    flex-basis: 30%;
+    margin: 10px;
+    text-align: center;
+}
+
+.hobby-img {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    border-radius: 10%;
+}
+
+dl dt {
+    font-weight: bold;
+}
+
+dl dd {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li a {
+        padding: 15px;
+    }
+
+    .img-with-text, .hobby-detail, .goal, .about-me-section, .profile-img-container, .about-text {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-img {
+        padding-top: 20px;
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
+    .internship {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .company-logo {
+        margin-bottom: 10px;
+    }
+
+    .hobby-section {
+        flex-basis: 100%;
+    }
+}
